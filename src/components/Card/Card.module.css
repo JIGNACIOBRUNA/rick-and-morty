@@ -1,0 +1,38 @@
+.fondo{
+    background-color: blue(0, 0, 0);
+    height: 100%;
+    
+}
+.fondo:hoder{
+    border-radius: 20px;
+}
+
+.cardsEnLinea{
+    display: flex;
+    justify-content: space-around;
+}
+
+.title{
+    color: whitesmoke;
+    color-interpolation-filters: auto;
+    text-align: center;
+}
+
+.borde{
+    border-radius: 200px;
+}
+
+.buttonSearch:hover{
+    background-color: rgb(241, 11, 11);
+    border: 1.5px solid rgb(180, 170, 170);
+    color:rgb(0, 0, 0)
+}
+
+.posicion{
+    display: relative;
+    bottom: -500x;
+    color: #ca5304;
+    margin-Right: 15px;
+    margin-Top: -10px; 
+
+}
