@@ -22,18 +22,6 @@ function App () {
   async function onSearch(character){
     try {
       const { data } = await axios (`http://localhost:3001/rickandmorty/character/${character}`)
-      //fetch()// con esto conectamos el back con el front donde las peticiones se hacen al servidor local
-        // .then((response) => response.json())
-        // .then((data) => {
-        //    if (data.name) {
-        //     const isDuplicate = characters.some((char) => char.id === data.id);
-        //     if(!isDuplicate){
-        //       setCharacters((oldChars) => [...oldChars, data]);
-        //     }else{
-        //       window.alert("El personaje ya esta en la lista");
-        //     }
-        //    } 
-        // }); 
         if(data.name){
           setCharacters((oldChars) => [...oldChars, data]);
         }
@@ -43,7 +31,6 @@ function App () {
       }
     }
       
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -51,16 +38,10 @@ const [access, setAccess] = useState(false);
 const email = 'ejemplo@gmail.com';
 const password = '1password';
 
-// function login(userData) {
-//    if (userData.password === password && userData.username === username) {
-//       setAccess(true);
-//       navigate('/home');
-//    }
-// }
-
 const login =  async (userData) => {
+  console.log("userData", userData);
   try {
-    const { username:email, password } = userData;
+    const { username: email, password } = userData;
     const { data } = await axios(URL + `?email=${email}&password=${password}`)
     
       // .then(({ data }) => {
