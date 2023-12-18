@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import NavBar from "../../components/NavBar/NavBar";
 
 
 export default function Detail(){
@@ -29,6 +30,7 @@ function navegar(){
       }, [detailId]);
     return(
         <div>
+            <NavBar/>
             <button onClick={navegar}> Ir a Home</button>
             <h1>NAME: {character.name}</h1>
             <div>

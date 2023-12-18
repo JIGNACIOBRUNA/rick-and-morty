@@ -1,29 +1,56 @@
-.buttonSearch{
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;  
+    font-size: 15px;
+   
+}
+
+.button{
+   background-color: #19d4bb;
+   font-size: 15px;
+   font-family: 'Aharoni', sans-serif;
+   border: none;
+   border-radius: 5px;
+   padding: 7px 10px;
+   cursor: pointer;
+   margin-bottom: 15px;
+   margin-right: 10px;
+}
+
+.button:hover{ 
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background-color: black;
+}
+
+
+
+/* .container {
+     background-color: rgb(223, 217, 217); 
+     margin-top: 3px;
+     width: -4vw;
+     height: 10vh;
+}
+​
+
+.button{
     background-color: #19d4bb;
     border: 1px solid black;
     border-radius:100px;
     font: Roboto;
     width:100px;
-    height:25px;
+    height:45px;
     
 }
-.buttonSearch:hover{
+.button:hover{
     background-color: rgb(6, 6, 12);
     border: 1.5px solid green;
     color:rgb(217, 217, 223)
     
-}
-​
-.search{
- border-radius:10px;
- height: 35px;
- width: 100px;
-
-}
-​
-.div {
-     background-color: rgb(223, 217, 217);
-     margin-top: 30px;
-     width: -40vw;
-     height: 100vh;
-}
+} */

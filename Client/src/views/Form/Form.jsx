@@ -25,13 +25,13 @@ export default function Form(props){
     }
 
     return( 
-        <div> 
-             <form onSubmit={handleSubmit}>
-                <div className={style.login}>
+        <div className={style.container}> 
+             <form onSubmit={handleSubmit} className={style.login}>
+                <div >
                 <label>Username: </label>
                 <input type ="text" placeholder="username" name="username" value={userData.username} onChange={handleInputChange}/>
                 </div>
-                <div className={style.loginform}>
+                <div>
                 <label>Password:</label>
                 <input type="password" placeholder="password" name="password" value={userData.password} onChange={handleInputChange}/>
                 </div>

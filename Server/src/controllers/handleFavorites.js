@@ -1,12 +1,14 @@
 let myFavorites = [];
 
 const postFav = (req, res) => {
-    myFavorites.push(req.body)
+    const favortie = req.body;
+    myFavorites.push(favortie)
     res.status(200).json(myFavorites)
 }
 
 const deleteFav = (req, res) =>{
-    myFavorites = myFavorites.filter(fav => +req.params.id !== fav.id)
+    const deleteFavortie = req.params.id;
+    myFavorites = myFavorites.filter((fav) => fav.id !== +deleteFavortie);
     res.status(200).json(myFavorites);
 };
 

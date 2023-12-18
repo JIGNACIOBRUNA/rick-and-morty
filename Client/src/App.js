@@ -3,10 +3,11 @@ import './App.css';
 import Cards from './components/Cards/Cards.jsx';
 import NavBar from "./components/NavBar/NavBar.jsx";
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import Detail from './components/Detail/Detail';
-import About from './components/About/About';
-import Form from "./components/Form/Form";
-import Favorites from "./components/Favorito/Favorite";
+import Detail from './views/Detail/Detail';
+import About from './views/About/About';
+import Form from "./views/Form/Form";
+import Favorites from "./views/Favorito/Favorite";
+import Home from "./views/Home/Home";
 import axios from "axios";
 
 const URL = 'http://localhost:3001/rickandmorty/login';
@@ -15,9 +16,9 @@ const URL = 'http://localhost:3001/rickandmorty/login';
 function App () {
   const [characters, setCharacters] = useState([]);
 
-  function onClose(id){
-    setCharacters(characters.filter((element) => element.id !== id));
-  }
+  // function onClose(id){
+  //   setCharacters(characters.filter((element) => element.id !== id));
+  // }
 
   async function onSearch(character){
     try {
@@ -64,12 +65,12 @@ useEffect(() => {
   return (
     <div className='App' style={{ padding: '25px' }}>
       <div>
-        {location.pathname !=="/" && <NavBar onSearch={onSearch} /> }
+        {/* {location.pathname !=="/" && <NavBar onSearch={onSearch} /> } */}
       
         <Routes>
           <Route path="/" element={<Form login ={login}/>}/>
-          <Route path= "/home" element={ <Cards
-          characters={characters} onClose ={onClose}
+          <Route path= "/home" element={ <Home
+          // characters={characters} onClose ={onClose}
         />} />
           <Route path= "/about" element={<About/>}/>
           <Route path= "/favorites" element={<Favorites/>}/>

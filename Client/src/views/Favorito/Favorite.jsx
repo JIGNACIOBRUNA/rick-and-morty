@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
-import Card from "../Card/Card";
+import Card from "../../components/Card/Card";
 import { Link } from "react-router-dom";
-import style from "../Favorito/Favorite.module.css"
+import style from "./Favorite.module.css"
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { orderCards, filterCards } from "../redux/action";
+import { orderCards, filterCards } from "../../components/redux/action";
+import NavBar from "../../components/NavBar/NavBar";
 
 const DivCard = styled.div`
 display: grid; 
@@ -23,6 +24,8 @@ const Favorites = (props) => {
     const dispatch = useDispatch();
     
     return( 
+        <div>
+            <NavBar/>
         <DivCard>
             <div>
                 <select name="order" onChange={(e)=>{dispatch(orderCards(e.target.value))}}>
@@ -47,6 +50,7 @@ const Favorites = (props) => {
                 />
             })}
         </DivCard> 
+        </div>
     )
 }
 
