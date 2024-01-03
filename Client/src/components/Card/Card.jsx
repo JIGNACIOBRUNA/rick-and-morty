@@ -5,25 +5,6 @@ import { connect } from "react-redux";
 import { useState, useEffect} from "react";
 
 
-// const DivCard = styled.div`
-// display: grid;
-// grid-template-columns: repeat(auto-fill, 320px); 
-// background-color: rgba(128, 128, 128, 0.5);
-// border-radius: 15px;
-// color: black;
-// `;
-
-// const Button = styled.button`
-// background-color: #cc1515;
-// color: black; 
-// color-size: 20px;
-// border-radius: 15px;
-// cursor: pointer;
-// trasition-duration: 0.5s;
-// width: 16%;
-// justify-content: space-around
-// `;
-
 
 export function Card(props) {
    const [isFav, setIsFav] = useState(false);
@@ -48,7 +29,7 @@ export function Card(props) {
    }, [myFavorites]);
 
    return (
-      
+      <div className={style.cardHeader}>
       <div className={style.card}>
          <div >
          {
@@ -71,7 +52,7 @@ export function Card(props) {
 
          </div>
       </div>
-     
+      </div>
    );
 }
 

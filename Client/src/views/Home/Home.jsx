@@ -28,8 +28,9 @@ const Home = () =>{
     return(
         <div>
             <NavBar onSearch={onSearch} />
-            <h1>Este es Home</h1>
-            <Cards characters={characters} onClose ={onClose}/>
+            <div className={style.homeContainer}>
+              <Cards characters={characters} onClose ={onClose}/>
+            </div>
         </div>
 
     )

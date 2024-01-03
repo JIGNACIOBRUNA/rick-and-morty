@@ -1,8 +1,12 @@
 let myFavorites = [];
 
 const postFav = (req, res) => {
-    const favortie = req.body;
-    myFavorites.push(favortie)
+    const character = req.body;
+    const favoriteRepeated = myFavorites.find(favorite =>{
+        return favorite.id === character.id;
+    }) ;
+    if(!favoriteRepeated) myFavorites.push(character)
+    
     res.status(200).json(myFavorites)
 }
 

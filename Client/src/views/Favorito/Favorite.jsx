@@ -22,7 +22,7 @@ transition: transform 0.25s ease-out;
 const Favorites = (props) => {
     const { myFavorites } = props;
     const dispatch = useDispatch();
-    
+
     return( 
         <div>
             <NavBar/>

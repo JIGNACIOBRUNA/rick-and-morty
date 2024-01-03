@@ -63,7 +63,7 @@ useEffect(() => {
 }, [access]);
 
   return (
-    <div className='App' style={{ padding: '25px' }}>
+    <div /*className='App' style={{ padding: '25px' }}*/>
       <div>
         {/* {location.pathname !=="/" && <NavBar onSearch={onSearch} /> } */}
       
