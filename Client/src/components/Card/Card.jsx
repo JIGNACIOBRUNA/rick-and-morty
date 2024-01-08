@@ -28,6 +28,13 @@ export function Card(props) {
       })
    }, [myFavorites]);
 
+   useEffect(() => {
+      if (!myFavorites.some((fav) => fav.id === props.id)) {
+        setIsFav(false);
+      }
+    }, [myFavorites, props.id]);
+  
+
    return (
       <div className={style.cardHeader}>
       <div className={style.card}>

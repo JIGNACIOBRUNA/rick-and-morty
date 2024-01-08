@@ -1,7 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css';
-import Cards from './components/Cards/Cards.jsx';
-import NavBar from "./components/NavBar/NavBar.jsx";
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Detail from './views/Detail/Detail';
 import About from './views/About/About';
@@ -9,6 +6,8 @@ import Form from "./views/Form/Form";
 import Favorites from "./views/Favorito/Favorite";
 import Home from "./views/Home/Home";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css';
 
 const URL = 'http://localhost:3001/rickandmorty/login';
 
@@ -83,24 +82,3 @@ useEffect(() => {
 }
 
 export default App
-
-
-/*
-
-import Card from './components/Card.jsx'
-import SearchBar from './components/SearchBar.jsx'
-<hr />
-<div>
-<SearchBar
-  onSearch={(characterID) => window.alert(characterID)}
-/>
-</div> 
-
-
-<Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-        />*/

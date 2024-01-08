@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actionTypes"
+import { ADD_CARD, ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER, REMOVE_CARD } from "./actionTypes"
 
 const initialState = {
     myFavorites: [],
@@ -10,17 +10,13 @@ const reducer = (state = initialState, action) => {
         case ADD_FAVORITE:
             return{
                 ...state, 
-                myFavorites: action.payload, 
-                allCharacters: action.payload
+                myFavorites: action.payload
             };
         case DELETE_FAVORITE:
-        //    const filtered = state.myFavorites.filter((character) => character.id !== payload)
            return{
             ...state,
-            myFavorites: action.payload,
-            allCharacters: action.allCharacters
+            myFavorites: state.myFavorites.filter((char) => char.id !== action.payload),
            };
-    
 
         case FILTER:
            const filterByGender = [...state.allCharacters].filter((character)=> character.gender === action.payload)
@@ -41,6 +37,16 @@ const reducer = (state = initialState, action) => {
             ...state,
             myFavorites: orderByFavorite,
         };
+        case ADD_CARD:
+            return{
+                ...state,
+                allCharacters: [...state.allCharacters, action.payload]
+            };
+        case REMOVE_CARD:
+            return{
+                ...state,
+                allCharacters: state.allCharacters.filter((card) =>card.id !== action.payload)
+            }
        default:
         return {...state} 
     }

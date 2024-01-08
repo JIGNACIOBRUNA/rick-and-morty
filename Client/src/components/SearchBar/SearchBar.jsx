@@ -6,7 +6,7 @@ export default function SearchBar(props) {
 
    const handleSearch = (event) => {
       let {value} = event.target;
-      setCharacter(value);
+      setCharacter(value);  
    };
 
    return (

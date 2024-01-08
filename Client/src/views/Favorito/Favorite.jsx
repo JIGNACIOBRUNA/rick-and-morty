@@ -1,46 +1,35 @@
 import { connect } from "react-redux";
-import Card from "../../components/Card/Card";
+import Cards from "../../components/Cards/Cards";
 import { Link } from "react-router-dom";
 import style from "./Favorite.module.css"
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { orderCards, filterCards } from "../../components/redux/action";
 import NavBar from "../../components/NavBar/NavBar";
 
-const DivCard = styled.div`
-display: grid; 
-grid-template-columns: repeat(auto-fill, 320px);
-justify-content: center;
-padding: 40px;
-gap: 40px;
-backface-visibility: hidden;
-transform: translate(0);
-transition: transform 0.25s ease-out;
-`;
-
 
 const Favorites = (props) => {
-    const { myFavorites } = props;
+    // const { myFavorites } = props;
     const dispatch = useDispatch();
+    const favorites = useSelector((state) => state.myFavorites);
 
     return( 
         <div>
             <NavBar/>
-        <DivCard>
             <div>
                 <select name="order" onChange={(e)=>{dispatch(orderCards(e.target.value))}}>
-                <option value="Ascendente">Ascendente</option>
-                <option value="Descendente">Descendente</option>
+                    <option value="Ascendente">Ascendente</option>
+                    <option value="Descendente">Descendente</option>
                 </select>
                 <select name="filter" onChange={(e)=>{dispatch(filterCards(e.target.value))}}>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Genderless">Genderless</option>
-                <option value="unknow">Unknow</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Genderless">Genderless</option>
+                    <option value="unknow">Unknow</option>
                 </select>
             </div>
-            {myFavorites.length && myFavorites.map((character) => {
-                return <Card
+            {/* {myFavorites.length && myFavorites.map((character) => {
+                return <Cards
                 id={character.id}
                 key={character.id}
                 name={character.name}
@@ -48,8 +37,8 @@ const Favorites = (props) => {
                 gender={character.gender}
                 image={character.image}
                 />
-            })}
-        </DivCard> 
+            })} */}
+            <Cards characters={favorites}/>
         </div>
     )
 }
