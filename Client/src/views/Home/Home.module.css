@@ -1,10 +1,11 @@
 .homeContainer {
-    width: 85vw;
-    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
     display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around;  */
+    flex-direction: column;
+    flex-grow: 1;
  }
+
  

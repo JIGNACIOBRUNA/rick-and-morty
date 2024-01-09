@@ -38,7 +38,7 @@ const Favorites = (props) => {
                 image={character.image}
                 />
             })} */}
-            <Cards characters={favorites}/>
+            <Cards isFavoritesView={true} characters={favorites}/>
         </div>
     )
 }

@@ -35,7 +35,7 @@ export default function Form(props){
                 <label>Password:</label>
                 <input type="password" placeholder="password" name="password" value={userData.password} onChange={handleInputChange}/>
                 </div>
-                <button type="submit">Login</button>
+                <button className={style.button} type="submit">Login</button>
             </form>
         </div>
    

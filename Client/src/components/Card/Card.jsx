@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { addFavorite, deleteFavorite } from "../redux/action";
 import { connect } from "react-redux";
 import { useState, useEffect} from "react";
-
+ 
 
 
 export function Card(props) {
@@ -36,30 +36,28 @@ export function Card(props) {
   
 
    return (
-      <div className={style.cardHeader}>
-      <div className={style.card}>
-         <div >
-         {
-         isFav ? (
-            <button onClick={handleFavorite}>❤️</button>
-         ) : (
-            <button onClick={handleFavorite}>🤍</button>
-         )}
-         <button className={style.button} onClick={props.onClose}>X</button> 
-         <Link to={`/detail/${props.id}`}>
-            <h2 className ={style.title}>{props.name}</h2>
-         </Link>
-         <div className={style.cardContent}>
-            <h2 >{props.species}</h2>
-            <h2 >{props.gender}</h2>
-         </div>
-         <div className={style.cardImg}>
-            <img  src={props.image} alt="https://rickandmortyapi.com/api/character/avatar/1.jpeg" />
-         </div>
-
-         </div>
-      </div>
-      </div>
+     <div className={style.cardContainer}>
+            {isFav ? (
+               <button className={style.favorite} onClick={handleFavorite}>❤️</button>
+            ) : (
+               <button className={style.nonFavorite} onClick={handleFavorite}>🤍</button>
+            )}
+            <button className={style.button} onClick={props.onClose}> X </button>
+       <div>
+         <img
+           src={props.image}
+           alt=""
+           className={style.image}
+         />
+       </div>
+       <Link to={`/detail/${props.id}` } style={{ textDecoration: 'none' }}>
+         <h2 className={style.title}>{props.name}</h2>
+       </Link>
+       <div >
+         <h2 className={style.cardContent}>{props.species}</h2>
+         <h2 className={style.cardContent}>{props.gender}</h2>
+       </div>
+     </div>
    );
 }
 

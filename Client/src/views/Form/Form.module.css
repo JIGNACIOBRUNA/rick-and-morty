@@ -22,12 +22,12 @@ body {
   width: 300px;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
 }
 
-label {
+.label {
   margin-bottom: 8px;
   font-weight: bold; /* Añade negrita al texto del label */
   color: #fff; /* Cambia el color del texto del label */
@@ -41,7 +41,7 @@ input {
   font-size: 14px;
 }
 
-button {
+.button {
   background-color: #770e85;
   color: #fff;
   padding: 10px;
@@ -51,7 +51,7 @@ button {
   font-size: 16px;
 }
 
-button:hover {
+.button:hover {
   background-color: #1a5cc0;
 }
 
