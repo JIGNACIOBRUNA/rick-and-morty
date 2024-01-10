@@ -1,3 +1,15 @@
 .container{
+    background-color:rgba(66, 65, 65, 0.986);
     color: black;
+    border-radius: 10px;
+    font-family: 'Aharoni';
+    margin-top: 20px;
+}
+.title{
+    text-align: center;
+}
+.text{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

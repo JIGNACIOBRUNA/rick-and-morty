@@ -23,3 +23,41 @@
 .borde{
     border-radius: 200px;
 }
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+.order{
+    background-color: purple;
+    font-family: 'Aharoni', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+.order:hover{
+  transform: scale(1.1);
+  transition: all 0.3s;
+  background-color: black;
+  color: purple;
+}
+.type{
+    background-color: purple;
+    font-family: 'Aharoni', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.type:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background-color: black;
+    color: purple; 
+}

@@ -2,7 +2,6 @@ import { connect } from "react-redux";
 import Cards from "../../components/Cards/Cards";
 import { Link } from "react-router-dom";
 import style from "./Favorite.module.css"
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { orderCards, filterCards } from "../../components/redux/action";
 import NavBar from "../../components/NavBar/NavBar";
@@ -16,28 +15,18 @@ const Favorites = (props) => {
     return( 
         <div>
             <NavBar/>
-            <div>
-                <select name="order" onChange={(e)=>{dispatch(orderCards(e.target.value))}}>
+            <div className={style.filter}>
+                <select className={style.order} name="order" onChange={(e)=>{dispatch(orderCards(e.target.value))}}>
                     <option value="Ascendente">Ascendente</option>
                     <option value="Descendente">Descendente</option>
                 </select>
-                <select name="filter" onChange={(e)=>{dispatch(filterCards(e.target.value))}}>
+                <select className={style.type} name="filter" onChange={(e)=>{dispatch(filterCards(e.target.value))}}>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Genderless">Genderless</option>
                     <option value="unknow">Unknow</option>
                 </select>
             </div>
-            {/* {myFavorites.length && myFavorites.map((character) => {
-                return <Cards
-                id={character.id}
-                key={character.id}
-                name={character.name}
-                species={character.species}
-                gender={character.gender}
-                image={character.image}
-                />
-            })} */}
             <Cards isFavoritesView={true} characters={favorites}/>
         </div>
     )

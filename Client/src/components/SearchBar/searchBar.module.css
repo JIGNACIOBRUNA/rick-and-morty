@@ -19,38 +19,15 @@
    border-radius: 5px;
    padding: 7px 10px;
    cursor: pointer;
-   margin-bottom: 15px;
+   margin-bottom: 2px;
    margin-right: 10px;
+   margin-left: 1px;
 }
 
 .button:hover{ 
     transform: scale(1.1);
     transition: all 0.3s;
+    color:purple;
     background-color: black;
 }
 
-
-
-/* .container {
-     background-color: rgb(223, 217, 217); 
-     margin-top: 3px;
-     width: -4vw;
-     height: 10vh;
-}
-​
-
-.button{
-    background-color: #19d4bb;
-    border: 1px solid black;
-    border-radius:100px;
-    font: Roboto;
-    width:100px;
-    height:45px;
-    
-}
-.button:hover{
-    background-color: rgb(6, 6, 12);
-    border: 1.5px solid green;
-    color:rgb(217, 217, 223)
-    
-} */
