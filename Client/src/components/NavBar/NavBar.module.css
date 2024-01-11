@@ -9,7 +9,7 @@ nav {
     display: flex;
     /* grid-template-columns: 60% 5% 5% 5% 30%; */
     justify-content: space-between;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
     margin-bottom: 20px;
 }
 

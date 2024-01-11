@@ -1,59 +1,69 @@
-body {
-  font-family: 'Arial', sans-serif;
+.fondo{
+  background-image: url("https://wallpaperaccess.com/full/2880737.png");
+  background-attachment: fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #5c3d3d;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;   
+  overflow-y: auto; 
 }
 
 .container {
-  margin-top: -100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .login {
-  background-color: #9b28e7;
-  border: 1px solid #070000;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  width: 300px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.label {
-  margin-bottom: 8px;
-  font-weight: bold; /* Añade negrita al texto del label */
-  color: #fff; /* Cambia el color del texto del label */
-}
-
-input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-size: 14px;
-}
-
-.button {
   background-color: #770e85;
-  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login label {
+  color: whitesmoke;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.login input {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login button {
+  background-color: #570f61;
+  color: #fff;
+  padding: 12px;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  width: 100%;
+  display: block;
 }
 
-.button:hover {
-  background-color: #1a5cc0;
+.login button:hover {
+  background-color: #4a0f52;
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
 
+.text{
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  color: black;
+}
 
 

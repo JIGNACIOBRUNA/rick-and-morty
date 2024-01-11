@@ -28,7 +28,7 @@ const Home = () =>{
     }
   };
     return(
-        <div>
+        <div className={style.fondo}>
             <NavBar onSearch={onSearch} />
             <div className={style.homeContainer}>
               <Cards characters={characters || []} onClose ={onClose}/>

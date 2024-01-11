@@ -6,7 +6,7 @@ import Form from "./views/Form/Form";
 import Favorites from "./views/Favorito/Favorite";
 import Home from "./views/Home/Home";
 import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 const URL = 'http://localhost:3001/rickandmorty/login';

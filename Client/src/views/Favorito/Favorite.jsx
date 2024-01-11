@@ -13,7 +13,7 @@ const Favorites = (props) => {
     const favorites = useSelector((state) => state.myFavorites);
 
     return( 
-        <div>
+        <div className={style.fondo}>
             <NavBar/>
             <div className={style.filter}>
                 <select className={style.order} name="order" onChange={(e)=>{dispatch(orderCards(e.target.value))}}>

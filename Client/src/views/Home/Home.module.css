@@ -1,11 +1,24 @@
-.homeContainer {
-    margin-top: 50px;
+.fondo{
+    background-image: url("https://wallpaperaccess.com/full/2880737.png");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;   
+    overflow-y: auto; 
+}
+
+/* .homeContainer {
+    margin-top: 0;
     width: 80%;
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-around;  */
+    /* overflow-x: auto; 
+    /* flex-wrap: wrap; 
+    justify-content: space-around;  
     flex-direction: column;
     flex-grow: 1;
- }
+ } */
 
  

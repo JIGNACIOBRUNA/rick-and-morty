@@ -1,0 +1,60 @@
+.fondo{
+    background-image: url("https://wallpaperaccess.com/full/2880737.png");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;   
+    overflow-y: auto; 
+}
+.button{
+    margin-top: 100px;
+    margin-left: 650px;
+    background-color: #19d4bb;
+    font-size: 15px;
+    font-family: 'Aharoni', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.contenedor{
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(75, 12, 75, 0.3);
+    align-items: center;
+    justify-content:center;
+    box-shadow: 3px 3px 5px 1px rgb(112, 44, 44);
+    width: 280px;
+    height: 420px;
+    margin-top: 30px;
+    border-radius: 10px;
+    
+}
+.image {
+    display: flex;    
+    background-color: #ce5249;
+    box-shadow: 3px 3px 5px 1px rgb(112, 44, 44);
+    border-radius: 6px;
+    width: 200px;
+    height: 220px; 
+    
+}
+.title{
+    color:black;
+    font-size:28px;
+    
+}
+.text{
+    font-size:17px;
+    color:black;
+
+}

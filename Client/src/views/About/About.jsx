@@ -5,7 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 
 export default function About(){
     return (
-      <div>
+      <div className={style.fondo}>
         <NavBar />
         <div className={style.container}>
           <h1 className={style.title}>Hola soy J Ignacio Bruna</h1>

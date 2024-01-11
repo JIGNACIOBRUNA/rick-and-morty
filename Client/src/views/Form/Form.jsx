@@ -25,18 +25,22 @@ export default function Form(props){
     }
 
     return( 
-        <div className={style.container}> 
-             <form onSubmit={handleSubmit} className={style.login}>
-                <div >
-                <label>Username: </label>
-                <input type ="text" placeholder="username" name="username" value={userData.username} onChange={handleInputChange}/>
-                </div>
-                <div>
-                <label>Password:</label>
-                <input type="password" placeholder="password" name="password" value={userData.password} onChange={handleInputChange}/>
-                </div>
-                <button className={style.button} type="submit">Login</button>
-            </form>
+        <div className={style.fondo}>
+            <div className={style.container}> 
+                <form onSubmit={handleSubmit} className={style.login}>
+                    <div>
+                    <label>Username: </label>
+                    <input type ="text" placeholder="username" name="username" value={userData.username} onChange={handleInputChange}/>
+                    <p className={style.text}>El usuario es: ejemplo@gmail.com</p>
+                    </div>
+                    <div>
+                    <label>Password:</label>
+                    <input type="password" placeholder="password" name="password" value={userData.password} onChange={handleInputChange}/>
+                    <p className={style.text}>La password es: password</p>
+                    </div>
+                    <button className={style.button} type="submit">Login</button>
+                </form>
+            </div>
         </div>
    
     )

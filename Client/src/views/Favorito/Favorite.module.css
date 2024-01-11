@@ -1,3 +1,14 @@
+.fondo{
+    background-image: url("https://wallpaperaccess.com/full/2880737.png");
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;   
+    overflow-y: auto; 
+}
 .contenedor{
     display: grid; 
     grid-template-columns: repeat(auto-fill, 320px);
@@ -27,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 100px;
     
 }
 .order{
