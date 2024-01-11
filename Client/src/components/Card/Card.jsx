@@ -8,7 +8,7 @@ import { useState, useEffect} from "react";
 
 export function Card(props) {
    const [isFav, setIsFav] = useState(false);
-   const { addFavorite, deleteFavorite, myFavorites } = props;
+   const { addFavorite, deleteFavorite, myFavorites, isFavoritesView } = props;
 
    const handleFavorite = () => {
       if(isFav){
@@ -42,7 +42,9 @@ export function Card(props) {
             ) : (
                <button className={style.nonFavorite} onClick={handleFavorite}>🤍</button>
             )}
+            {isFavoritesView ? null : (
             <button className={style.button} onClick={props.onClose}> X </button>
+            )}
        <div>
          <img
            src={props.image}

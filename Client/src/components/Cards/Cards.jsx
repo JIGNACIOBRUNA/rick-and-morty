@@ -3,7 +3,7 @@ import Card from '../Card/Card';
 
 
 export default function Cards(props) {
-   const { characters } = props;
+   const { characters, isFavoritesView, onClose } = props;
    let i = 0; 
     // realizamos un map a characters que es donde se encuentran los personajes del ejercicio RECORDAR QUE EL ELEMENTO LO DEJAMOS COMO PARAMETRO PUEDE TENER OTRO NOMBRE, despues renderizamos con Card que es donde tenemos definidos el nombre raza genero e imagen (del ejercicio anterior) 
    return (
@@ -16,8 +16,10 @@ export default function Cards(props) {
          species ={elemento.species} 
          gender = {elemento.gender} 
          image = {elemento.image} 
-         onClose = {() => props.onClose(elemento.id)}
-         key = {i++} />)}
+         onClose = {isFavoritesView ? null :() => onClose(elemento.id)}
+         key = {elemento.id}
+         isFavoritesView={isFavoritesView}
+         />)}
       </div>
    )
 }
