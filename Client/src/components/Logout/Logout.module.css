@@ -1,0 +1,16 @@
+.button{
+    border: none;
+    padding: 0;    
+    background-color: inherit;  
+    cursor: pointer;
+    margin-right: 50px; 
+}
+
+.imagen{
+    width: 30px; 
+    height: 30px; 
+}
+.imagen:hover{
+    transform: scale(1.5);
+    transition: all 0.3s;
+}
